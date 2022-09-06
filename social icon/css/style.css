@@ -1,0 +1,137 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body
+{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    /* background: rgba(0,0,0,0.2); */
+}
+
+.container h1
+{
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: monospace;
+    text-transform: capitalize;
+}
+.tooltip-box
+{
+    display: inline-flex;
+}
+.tooltip-box .icon
+{
+    margin: 0 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.tooltip-box .icon span
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background: #fff;
+    display: block;
+    text-align: center;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+.tooltip-box .icon span i
+{
+    line-height: 50px;
+    font-size: 1.2rem;
+}
+.tooltip-box .icon .tooltip
+{
+    position: absolute;
+    top: 0px;
+    background:#fff;
+    font-size: 14px;
+    padding: 6px 18px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-family: monospace;
+    pointer-events: none;
+    opacity: 0;
+}
+.tooltip-box .icon .tooltip::before
+{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fef8f8;
+    left: 50%;
+    bottom: -7.5px;
+    transform: translateX(-50%) rotate(45deg);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.tooltip-box .icon:hover .tooltip
+{
+    opacity: 1;
+    top: -60px;
+    pointer-events: auto;
+}
+.tooltip-box .icon:hover .tooltip,
+.tooltip-box .icon:hover span
+{
+    text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+}
+.tooltip-box .facebook:hover span,
+.tooltip-box .facebook:hover .tooltip,
+.tooltip-box .facebook:hover .tooltip::before
+{
+    background: #3b5999;
+    color: #fff;
+}
+
+.tooltip-box .facebook-messanger:hover span,
+.tooltip-box .facebook-messanger:hover .tooltip,
+.tooltip-box .facebook-messanger:hover .tooltip::before
+{
+    background: #2a5fd0;
+    color: #fff;
+}
+
+.tooltip-box .instagram:hover span,
+.tooltip-box .instagram:hover .tooltip,
+.tooltip-box .instagram:hover .tooltip::before
+{
+    background: linear-gradient(to left, red, yellow);
+    color: #fff;
+}
+
+.tooltip-box .linkedin:hover span,
+.tooltip-box .linkedin:hover .tooltip,
+.tooltip-box .linkedin:hover .tooltip::before
+{
+    background: #3b5999;
+    color: #fff;
+}
+
+.tooltip-box .telegram:hover span,
+.tooltip-box .telegram:hover .tooltip,
+.tooltip-box .telegram:hover .tooltip::before
+{
+    background: #71b9e8;
+    color: #fff;
+}
+.tooltip-box .youtube:hover span,
+.tooltip-box .youtube:hover .tooltip,
+.tooltip-box .youtube:hover .tooltip::before
+{
+    background: #f40b0b;
+    color: #fff;
+}
